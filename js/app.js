@@ -22,7 +22,7 @@ var showForecast = function(forecast) {
 
 function getRequest(zipcode) {
 	
-	var url = 'http://api.wunderground.com/api/0a1f02ac482c3b35/forecast10day/q/' + zipcode + '.json';
+	var url = 'https://api.wunderground.com/api/0a1f02ac482c3b35/forecast10day/q/' + zipcode + '.json';
 	
 	$.getJSON(url, function(data){
 		console.log(data.forecast.simpleforecast.forecastday);
