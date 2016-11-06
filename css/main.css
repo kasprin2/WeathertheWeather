@@ -6,6 +6,7 @@ header {
 body {
   font-family: "Roboto", sans-serif;
   color: #252525;
+  background-color: whitesmoke;
 }
 
 header h1 {
@@ -27,11 +28,17 @@ form {
 
 .day {
   border: 1px solid #E5E5E5;
+ /* max-width: 14.5vw;*/
   margin-bottom: 20px;
   margin-left: 10px;
   border-radius: 7px;
   box-shadow: 1px 1px 13px 0px black;
+  background-color: white;
 }
+
+/*.hidden .templates {
+  max-width: 14.5px;
+}*/
 
 .weather-image {
   width: 40%;
@@ -44,6 +51,7 @@ form {
 .day-info h3 {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1.1em;
 }
 
 /*.day-info p {
