@@ -21,19 +21,20 @@ form {
   margin-bottom: 20px;
 }
 
-.col-5 {
+.hidden {
   display: none;
 }
 
 .day {
   border: 1px solid #E5E5E5;
   margin-bottom: 20px;
+  margin-left: 10px;
   border-radius: 7px;
   box-shadow: 1px 1px 13px 0px black;
 }
 
 .weather-image {
-  width: 100%;
+  width: 40%;
 }
 
 .day-info {
@@ -45,6 +46,6 @@ form {
   margin-bottom: 0;
 }
 
-.day-info p {
+/*.day-info p {
   margin: 0.5em 0;
-}
+}*/
