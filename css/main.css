@@ -22,8 +22,12 @@ form {
   margin-bottom: 20px;
 }
 
-.hidden {
+.refresh-button, .hidden {
   display: none;
+}
+
+.body-header {
+  text-align: center;
 }
 
 .day {

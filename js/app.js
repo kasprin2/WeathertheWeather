@@ -1,3 +1,5 @@
+var initialized = false;
+
 var showForecast = function(forecast) {
 
 	var results = $('.templates .day').clone();
@@ -25,7 +27,7 @@ function getRequest(zipcode) {
 	var url = 'https://api.wunderground.com/api/0a1f02ac482c3b35/forecast10day/q/' + zipcode + '.json';
 	
 	$.getJSON(url, function(data){
-		console.log(data.forecast.simpleforecast.forecastday);
+	
 		var days = data.forecast.simpleforecast.forecastday;
 		$.each(days, function(i, item) {
 			var day = showForecast(item);
@@ -37,13 +39,18 @@ function getRequest(zipcode) {
 
 
 $(document).ready(function() {
+
 	$('.zipcode').submit(function(e){
 		e.preventDefault();
-
-		var zipcode = $('#zipcode').val();
-
+		zipcode = $('#zipcode').val();
 		getRequest(zipcode);
-		console.log(zipcode);
-
+		$('#zipcode').val("");
+		$('.refresh-button').show();
+		$('.body-header').text('Viewing 10-day weather forecast for ' + zipcode);
 	});
+
+	$('.refresh-button').on('click', function() {
+		window.location.reload();
+	});
+
 });
